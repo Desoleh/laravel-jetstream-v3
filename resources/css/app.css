@@ -15,3 +15,38 @@
 .main.active {
     @apply md:w-full md:ml-0;
 }
+
+@layer components {
+    
+    .darktext{
+        @apply
+        text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white
+    }
+
+    .box {
+        @apply
+            text-gray-700
+            min-w-full
+            min-h-full
+            mt-2;
+    }
+    .active {
+        @apply
+        absolute inset-y-0 left-0 w-2 bg-teal-600 rounded-tr-lg rounded-br-lg
+    }
+
+    .menu-active {
+        @apply
+        bg-teal-500 border-y shadow-md flex items-center text-white
+    }
+
+    .main-menu-active {
+        @apply
+        border-b-4 border-b-teal-700
+    }
+
+    .menu-hover {
+        @apply
+        hover:bg-teal-300 hover:text-black  hover:flex hover:items-center dark:hover:text-white
+    }
+}

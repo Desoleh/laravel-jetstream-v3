@@ -7,6 +7,9 @@
         </a>
 
         <ul class="mt-4">
+            <li>
+                <livewire:menu.sidebar-menu>
+            </li>
             <li class="mb-1 group active">
                 <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white group-[.selected]:bg-gray-950 group-[.selected]:text-gray-100">
                     <i class="ri-home-2-line mr-3 text-lg"></i>
@@ -56,7 +59,7 @@
 
     <!-- start: Main -->
     <main class="w-full md:w-[calc(100%-320px)] md:ml-80 bg-gray-50 dark:bg-gray-700 dark:text-white min-h-screen transition-all main">
-        <div class="py-2 px-6 bg-white dark:bg-gray-800 dark:text-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
+        <div class="py-4 px-6 bg-white dark:bg-gray-800 dark:text-white flex items-center shadow-md shadow-black/5 sticky top-0 left-0 z-30">
             <button type="button" class="text-lg text-gray-600 dark:text-gray-300 sidebar-toggle">
                 <i class="ri-menu-line"></i>
             </button>
@@ -251,14 +254,16 @@
                 </li>
             </ul>
         </div>
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+
+        <!-- Page Heading -->
+        @if (isset($header))
+            <header class="bg-white dark:bg-gray-800 shadow">
+                <div class="max-w-full mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    {{ $header }}
+                </div>
+            </header>
+        @endif
+
         <div class="p-6">
             {{ $slot }}
         </div>
