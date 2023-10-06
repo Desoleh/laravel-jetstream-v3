@@ -1,6 +1,6 @@
 <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
     <!-- start: Sidebar -->
-    <div class="fixed left-0 top-0 w-80 h-full bg-gray-200 dark:bg-gray-800 dark:text-white p-4 z-50 sidebar-menu transition-transform">
+    <div class="fixed left-0 top-0 w-80 h-full bg-gray-100 dark:bg-gray-800 dark:text-white p-4 z-50 sidebar-menu transition-transform">
 
         <a href="#" class="flex items-center pb-4 border-b border-b-gray-800">
             <img src="{{ asset('images/LOGO-KAPM.png') }}" alt="" class="h-24 rounded object-cover">
