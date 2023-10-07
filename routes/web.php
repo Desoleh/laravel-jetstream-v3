@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Livewire\CreatePost;
 use App\Livewire\SuratTugas\Permohonan;
 use App\Livewire\User\UserResource;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified',]
     Route::get('/dashboard', function () {return view('dashboard');})->name('dashboard');
     Route::get('/permohonan', Permohonan::class)->name('permohonan');
     Route::get('/user-resource', UserResource::class)->name('user-resource');
+    Route::get('/posts', CreatePost::class)->name('posts');
 });
 
 Route::group(['middleware' => ['auth']], function() {

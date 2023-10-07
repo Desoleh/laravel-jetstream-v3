@@ -9,6 +9,10 @@ export default {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        './node_modules/flowbite/**/*.js',
+        './vendor/wireui/wireui/resources/**/*.blade.php',
+        './vendor/wireui/wireui/ts/**/*.ts',
+        './vendor/wireui/wireui/src/View/**/*.php'
     ],
 
     theme: {
@@ -19,8 +23,16 @@ export default {
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [
+        forms,
+        typography,
+        require('flowbite/plugin'),
+    ],
 
     darkMode: 'class', // or 'media' if you want to use the OS setting
+
+    presets: [
+        require('./vendor/wireui/wireui/tailwind.config.js')
+    ],
 };
 

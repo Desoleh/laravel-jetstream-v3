@@ -22,6 +22,15 @@
     </head>
     <body class="font-sans antialiased" x-data="themeSwitcher()" :class="{ 'dark': switchOn }">
 
+        <x-notifications />
+
+        {{-- <x-layouts.flowbite/> --}}
+
         @include('layouts.fajar')
+
+        <wireui:scripts />
+
+        <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+
     </body>
 </html>
